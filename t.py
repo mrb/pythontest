@@ -27,7 +27,7 @@ class CodeClimateReporter(BaseReporter):
         'fatal': 'critical',
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(shmelf, *args, **kwargs):
         super(CodeClimateReporter, self).__init__(*args, **kwargs)
         with open('/config.json') as config_file:
             self.config = json.loads(config_file.read())
